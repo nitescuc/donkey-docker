@@ -1,0 +1,5 @@
+FROM donkey-base-opencv:3.5-stretch
+
+RUN cd /tmp && wget -O tensorflow-1.8.0-cp35-none-linux_armv7l.whl https://github.com/lhelontra/tensorflow-on-arm/releases/download/v1.8.0/tensorflow-1.8.0-cp35-none-linux_armv7l.whl && \
+    pip install tensorflow-1.8.0-cp35-none-linux_armv7l.whl && rm tensorflow-1.8.0-cp35-none-linux_armv7l.whl && \
+    pip install keras==2.1.3 pillow h5py

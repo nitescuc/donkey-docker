@@ -1,0 +1,1 @@
+docker build -t donkey-deps:3.5-stretch -f Dockerfile-deps .
