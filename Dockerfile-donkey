@@ -1,6 +1,7 @@
 FROM donkey-tensorflow:1.8.0
 
-RUN mkdir -p /d2 && mkdir -p /donkey && cd /donkey && \
+RUN mkdir -p /d2 && mkdir -p /donkey && cd /donkey && mkdir -p /data/log && \
     git clone https://github.com/nitescuc/donkey.git donkeycar && \ 
+    pip install serial && \
     pip install -e donkeycar && \
     donkey createcar --path /d2
