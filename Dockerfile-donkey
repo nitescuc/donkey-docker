@@ -1,0 +1,6 @@
+FROM donkey-tensorflow:1.8.0
+
+RUN mkdir -p /d2 && mkdir -p /donkey && cd /donkey && \
+    git clone https://github.com/nitescuc/donkey.git donkeycar && \ 
+    pip install -e donkeycar && \
+    donkey createcar --path /d2

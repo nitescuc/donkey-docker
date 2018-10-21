@@ -1,0 +1,1 @@
+docker build -t donkey:3.0.0_1.8.0 -f Dockerfile-donkey .
