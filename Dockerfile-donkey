@@ -2,7 +2,7 @@ FROM donkey-tensorflow:1.8.0
 
 RUN mkdir -p /d2 && mkdir -p /donkey && cd /donkey && mkdir -p /data/log && \
     git clone https://github.com/nitescuc/donkey.git donkeycar && \ 
-    pip install serial && \
+    pip install pyserial && \
     pip install PyV4L2Camera && \
     pip install -e donkeycar && \
     pip install tornado==4.5.3 && \
