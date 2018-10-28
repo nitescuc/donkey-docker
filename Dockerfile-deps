@@ -3,4 +3,4 @@ FROM donkey-base-opencv:3.5-stretch
 RUN apt install -y libhdf5-dev && \
     cd /tmp && wget -O tensorflow-1.8.0-cp35-none-linux_armv7l.whl https://github.com/lhelontra/tensorflow-on-arm/releases/download/v1.8.0/tensorflow-1.8.0-cp35-none-linux_armv7l.whl && \
     pip install tensorflow-1.8.0-cp35-none-linux_armv7l.whl && rm tensorflow-1.8.0-cp35-none-linux_armv7l.whl && \
-    pip install serial scipy pyyaml pillow h5py keras==2.1.3
+    pip install serial scipy pyyaml pillow h5py keras==2.1.3 docopt tornado==4.5.3 moviepy pandas greenlet imageio MarkupSafe
