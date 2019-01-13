@@ -1,0 +1,7 @@
+FROM tazlogic/donkey:3.0.0_1.8.0
+
+RUN echo 'deb [trusted=yes] http://deb.odroid.in/5422-s bionic main' > /etc/apt/sources.list.d/odroid.list \
+  && apt update && apt install -y mali-fbdev && apt install -y clinfo \
+  && mkdir -p /etc/OpenCL/vendors && sh -c 'echo "/usr/lib/arm-linux-gnueabihf/mali-egl/libOpenCL.so" > /etc/OpenCL/vendors/armocl.icd' \
+  && pip install plaidml-keras
+
